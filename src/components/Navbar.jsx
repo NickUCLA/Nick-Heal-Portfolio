@@ -1,14 +1,11 @@
-import "../styles/Header.css";
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import logo from "/src/icons/N.png";
 
-const NavBar = () => {
+function NavBar() {
   const mobileMenuRef = useRef(null);
-  const [showMenu, setShowMenu] = useState(true);
 
   const toggleMobileMenu = () => {
-    setShowMenu((prevShowMenu) => !prevShowMenu);
     if (mobileMenuRef.current) {
       mobileMenuRef.current.classList.toggle("hidden");
     }
@@ -16,8 +13,10 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="flex row-span-1 hidden lg:flex flex-row  justify-between items-center mx-20 my-3 text-white">
-        <div className="left"></div>
+      <div className="flex row-span-1 hidden lg:flex flex-row justify-between items-center mx-20 my-3 text-white">
+        <div className="left">
+          <img src={logo} alt="Logo" className="w-24 h-24" />
+        </div>
         <div className="right">
           <ul className="flex gap-20 flex-row text-lighter-gray">
             <li className="cursor-pointer flex flex-row items-center group">
@@ -58,8 +57,72 @@ const NavBar = () => {
           </ul>
         </div>
       </div>
+      {/* Mobile menu */}
+      <div className="lg:hidden flex justify-between mx-10 mt-5 flex-row items-center">
+        <div className="left">
+          <img alt="Logo" src={logo} className="w-24 h-24" />
+        </div>
+        <button
+          onClick={toggleMobileMenu}
+          className="outline-none mobile-menu-button"
+        >
+          <svg
+            className="w-8 h-8 text-gray-500 hover:text-green-500"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileHover={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        ref={mobileMenuRef}
+        className="hidden lg:hidden mobile-menu"
+      >
+        <ul className="flex flex-col text-lighter-gray">
+          <li className="cursor-pointer flex flex-row bg-primary-green text-white py-3 items-center group hover:opacity-70">
+            <a
+              className="flex flex-row mx-10 items-center gap-2 group-hover:text-white transition-all"
+              href="#about-me"
+            >
+              <span>About Me</span>
+            </a>
+          </li>
+          <li className="cursor-pointer flex flex-row py-3 items-center bg-primary-green text-white gap-2 group hover:opacity-70">
+            <a
+              className="flex flex-row mx-10 items-center gap-2 group-hover:text-white transition-all"
+              href="#my-work"
+            >
+              <span>My Projects</span>
+            </a>
+          </li>
+          <li className="cursor-pointer flex flex-row py-3 bg-primary-green text-white items-center gap-2 group hover:opacity-70">
+            <a
+              className="flex flex-row items-center gap-2 group-hover:text-white mx-10 transition-all"
+              href=""
+            >
+              <span>Blog</span>
+            </a>
+          </li>
+          <li className="cursor-pointer flex flex-row py-3 bg-primary-green text-white items-center gap-2 group hover:opacity-70">
+            <a
+              className="flex flex-row items-center gap-2 group-hover:text-white mx-10 transition-all"
+              href=""
+            >
+              <span>Contact Me</span>
+            </a>
+          </li>
+        </ul>
+      </motion.div>
     </>
   );
-};
+}
 
 export default NavBar;
