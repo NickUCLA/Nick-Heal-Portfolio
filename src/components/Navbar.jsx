@@ -13,7 +13,7 @@ function NavBar() {
 
   return (
     <>
-      <div className="flex row-span-1 hidden lg:flex flex-row justify-between items-center mx-20 my-3 text-white">
+      <div className="flex row-span-1 hidden lg:flex flex-row justify-between items-center ml-12 mx-20 my-3 text-white">
         <div className="left">
           <img src={logo} alt="Logo" className="w-24 h-24" />
         </div>
