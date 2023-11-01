@@ -21,7 +21,7 @@ function NavBar() {
           <ul className="flex gap-20 flex-row text-lighter-gray">
             <li className="cursor-pointer flex flex-row items-center group">
               <a
-                className="flex flex-row items-center gap-2 group-hover:text-white transition-all"
+                className="flex flex-row items-center gap-2 group-hover:text-white transition-all text-lg"
                 href="#about-me"
               >
                 <span className="w-[11px] h-[11px] bg-light-green rounded-full hover:bg-primary-green group-hover:bg-primary-green transition-all"></span>
@@ -30,7 +30,7 @@ function NavBar() {
             </li>
             <li className="cursor-pointer flex flex-row items-center gap-2 group">
               <a
-                className="flex flex-row items-center gap-2 group-hover:text-white transition-all"
+                className="flex flex-row items-center gap-2 group-hover:text-white transition-all text-lg"
                 href="#my-work"
               >
                 <span className="w-[11px] h-[11px] bg-light-green rounded-full hover:bg-primary-green group-hover:bg-primary-green transition-all"></span>
@@ -39,17 +39,17 @@ function NavBar() {
             </li>
             <li className="cursor-pointer flex flex-row items-center gap-2 group">
               <a
-                className="flex flex-row items-center gap-2 group-hover:text-white transition-all"
+                className="flex flex-row items-center gap-2 group-hover:text-white transition-all text-lg"
                 href=""
               >
                 <span className="w-[11px] h-[11px] bg-light-green rounded-full hover:bg-primary-green group-hover:bg-primary-green transition-all"></span>
-                <span>Blog</span>
+                <span>GitHub</span>
               </a>
             </li>
             <li className="cursor-pointer">
               <a
                 href="#contact-me"
-                className="border-2 border-light-green text-gray py-2 px-5 rounded-md hover:text-white hover:bg-primary-green transition-all"
+                className="border-2 border-light-green text-gray py-2 px-5 rounded-md hover:text-white hover:bg-primary-green transition-all text-lg"
               >
                 Contact Me
               </a>
@@ -81,7 +81,7 @@ function NavBar() {
       </div>
       <motion.div
         initial={{ opacity: 0, y: -20 }}
-        whileHover={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         ref={mobileMenuRef}
         className="hidden lg:hidden mobile-menu"
@@ -108,7 +108,7 @@ function NavBar() {
               className="flex flex-row items-center gap-2 group-hover:text-white mx-10 transition-all"
               href=""
             >
-              <span>Blog</span>
+              <span>GitHub</span>
             </a>
           </li>
           <li className="cursor-pointer flex flex-row py-3 bg-primary-green text-white items-center gap-2 group hover:opacity-70">
