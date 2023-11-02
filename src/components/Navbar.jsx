@@ -60,7 +60,7 @@ function NavBar() {
       {/* Mobile menu */}
       <div className="lg:hidden flex justify-between mx-10 mt-5 flex-row items-center">
         <div className="left">
-          <img alt="Logo" src={logo} className="w-24 h-24" />
+          <img alt="Logo" src={logo} className="w-20 h-20" />
         </div>
         <button
           onClick={toggleMobileMenu}

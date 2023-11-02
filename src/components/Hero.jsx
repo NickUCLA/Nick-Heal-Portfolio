@@ -14,13 +14,13 @@ function Hero() {
             transition={{ duration: 1, delay: 0.5 }}
             className="col-span-12 lg:col-span-11 text-center lg:text-left"
           >
-            <h4 className="text-lighter-gray mb-1 lg:mb-3 lg:text-lg">
-              Hi, I&apos;m
+            <h4 className="text-lighter-gray mb-0 lg:mb-3 lg:text-lg">
+              Hello, I&apos;m
             </h4>
             <h1 className="text-white flex flex-row justify-center lg:justify-start items-center">
               <span className="">
                 <img
-                  className="hidden lg:inline transform -translate-y-4"
+                  className="hidden lg:inline transform -translate-y-2.5"
                   src={logo}
                   alt="Description of Image"
                   width="112"
@@ -39,7 +39,7 @@ function Hero() {
             <h2 className="lg:-mt-3 text-light-gray lg:text-4xl md:text-2xl text-xl">
               Full Stack Developer
             </h2>
-            <p className="mt-3 text-lighter-gray lg:text-lg">
+            <p className="mt-3 text-lighter-gray lg:text-lg mr-6 ml-6 lg:ml-0">
               I am a full stack developer who excels in creating dynamic,
               <br />
               user-friendly websites and robust web applications.
