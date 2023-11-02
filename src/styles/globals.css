@@ -7,7 +7,7 @@ body {
   padding: 0;
   background-color: #12203d;
   margin: 0;
-  font-family: "Barking At Stars Straight", "sans-serif";
+  font-family: "BWO", "sans-serif";
   scroll-behavior: smooth;
 }
 
@@ -21,8 +21,8 @@ a {
 }
 
 @font-face {
-  font-family: "Barking At Stars Straight";
-  src: url("./font/BarkingAtStarsStraight-8MlK2.ttf") format("truetype");
+  font-family: "BWO";
+  src: url("./font/Aquire-BW0ox.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
