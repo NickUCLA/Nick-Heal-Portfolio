@@ -12,11 +12,10 @@ const aboutData = {
     "GraphQL",
     "GitHub",
   ],
-  mail: "test@gmail.com",
+  mail: "nheal179@gmail.com",
   social_media: {
-    github: "https://github.com/mastagoon",
-    linkedin: "https://www.linkedin.com/in/mastagoon/",
-    messenger: "https://m.me/sahal.omar0",
+    github: "https://github.com/NickUCLA",
+    linkedin: "https://www.linkedin.com/in/nick-heal-8b7a7128b/",
   },
 };
 
