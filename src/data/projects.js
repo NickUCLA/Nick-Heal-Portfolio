@@ -1,5 +1,6 @@
 const projects = [
   {
+    id: "TechBlog",
     title: "Tech Blog",
     year: 2023,
     thumbnail: "TechBlogDashboard.png",
@@ -46,6 +47,7 @@ const projects = [
     url: "https://lit-dusk-22956-b49298a97cc6.herokuapp.com/",
   },
   {
+    id: "5DayForecast",
     title: "5 Day Forecast",
     year: 2023,
     thumbnail: "ForecastThumbnail.png",
@@ -97,6 +99,7 @@ const projects = [
     url: "https://nickucla.github.io/Nicks-5-day-forecast-app/",
   },
   {
+    id: "NoteTaker",
     title: "Note Taker",
     year: 2023,
     thumbnail: "NoteTakerDashboard.png",
@@ -149,6 +152,7 @@ const projects = [
     url: "https://hidden-ravine-45484-80c25349ac98.herokuapp.com/",
   },
   {
+    id: "WorkScheduler",
     title: "Work Day Scheduler",
     year: 2023,
     thumbnail: "WorkSchedulerDashboard.png",
@@ -200,6 +204,7 @@ const projects = [
     url: "https://nickucla.github.io/Nicks-work-day-scheduler/",
   },
   {
+    id: "CodingQuiz",
     title: "Nick's Coding Quiz",
     year: 2023,
     thumbnail: "QuizDashboard.png",
@@ -243,6 +248,7 @@ const projects = [
     url: "https://nickucla.github.io/Nicks-Bootcamp-Quiz/",
   },
   {
+    id: "PasswordGenerator",
     title: "Password Generator",
     year: 2023,
     thumbnail: "PasswordThumbnail.png",

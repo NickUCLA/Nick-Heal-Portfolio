@@ -3,42 +3,44 @@ import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import PropTypes from "prop-types";
 import { Carousel } from "flowbite-react";
+import { useParams, useNavigate } from "react-router-dom";
+import projects from "../data/projects";
+import { useEffect } from "react";
 
-const ProjectShowcase = ({ isOpenFromProps, setIsOpenFromProps, project }) => {
-  ProjectShowcase.propTypes = {
-    isOpenFromProps: PropTypes.bool.isRequired,
-    setIsOpenFromProps: PropTypes.func.isRequired,
-    project: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      year: PropTypes.number.isRequired,
-      thumbnail: PropTypes.string.isRequired,
-      images: PropTypes.arrayOf(
-        PropTypes.shape({
-          image: PropTypes.string.isRequired,
-          alt: PropTypes.string,
-          caption: PropTypes.string,
-        })
-      ).isRequired,
-      info: PropTypes.arrayOf(
-        PropTypes.shape({
-          infoTitle: PropTypes.string.isRequired,
-          infoText: PropTypes.string.isRequired,
-        })
-      ).isRequired,
-      github: PropTypes.string,
-      design: PropTypes.string,
-      url: PropTypes.string,
-    }).isRequired,
-    closeButton: PropTypes.bool,
+const ProjectShowcase = () => {
+  useEffect(() => {
+    // Store the original value of overflow
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+    document.body.style.overflow = "hidden";
+
+    // Revert on cleanup
+    return () => {
+      document.body.style.overflow = originalStyle;
+    };
+  }, []);
+
+  let navigate = useNavigate();
+  let { projectId } = useParams();
+  let project = projects.find((p) => p.id === projectId);
+
+  // Close the modal by navigating back
+  const closeModal = () => {
+    navigate(-1);
   };
+
+  // If no project is found, navigate back to the main page (or handle the error as you see fit)
+  if (!project) {
+    closeModal();
+    return null; // Or some error component if you like
+  }
+
   return (
-    <Transition appear show={isOpenFromProps} as={Fragment}>
+    <Transition appear show={true} as={Fragment}>
       <Dialog
         as="div"
         className="fixed inset-0 z-10 overflow-y-auto"
-        onClose={() => setIsOpenFromProps(false)}
+        onClose={closeModal}
       >
         <div className="min-h-screen text-center">
           <Transition.Child
@@ -52,19 +54,28 @@ const ProjectShowcase = ({ isOpenFromProps, setIsOpenFromProps, project }) => {
           >
             <Dialog.Overlay className="fixed inset-0 bg-dark_shadow" />
           </Transition.Child>
+
+          <span
+            aria-hidden="true"
+            className="hidden sm:inline-block sm:align-middle sm:h-screen"
+          >
+            &#8203;
+          </span>
+
+          {/* Modal content goes here, wrap it around Transition.Child */}
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
-            enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
+            enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            enterTo="opacity-100 translate-y-0 sm:scale-100"
             leave="ease-in duration-200"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
+            leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+            leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <div className="inline-block w-screen min-h-screen py-6 text-left align-middle transition-all transform bg-semi-transparent text-white flex flex-col  gap-5">
               <div
                 // Sets the state to false to close the showcase
-                onClick={() => setIsOpenFromProps(false)}
+                onClick={() => closeModal()}
                 className="grid grid-cols-12"
               >
                 <div className="col-span-12 ml-6 flex flex-row gap-3 items-center">
