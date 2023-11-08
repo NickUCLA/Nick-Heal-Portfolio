@@ -10,13 +10,13 @@ const config = {
   theme: {
     extend: {
       colors: {
-        "primary-bg": "#12203D",
-        "primary-green": "#31E981",
-        "light-green": "rgba(49, 233, 129, 0.6)",
+        "primary-bg": "#2A0944",
+        "primary-green": "#FEC260",
+        "light-green": "#A12568",
         "light-gray": "rgba(255, 255, 255, 0.7)",
-        "lighter-gray": "rgba(255, 255, 255, 0.4)",
-        "semi-transparent": "rgba(18, 32, 61, .98)",
-        "primary-blue": "rgba(83, 172, 255, 1)",
+        "lighter-gray": "#FAF3E3",
+        "semi-transparent": "rgba(42, 9, 68, .98)",
+        "primary-blue": "#A12568",
       },
     },
   },

@@ -19,7 +19,7 @@ function NavBar() {
           <img src={logo} alt="Logo" className="w-24 h-24" />
         </div>
         <div className="right">
-          <ul className="flex gap-20 flex-row text-lighter-gray">
+          <ul className="flex gap-20 flex-row text-light-gray">
             <li className="cursor-pointer flex flex-row items-center group">
               <a
                 className="flex flex-row items-center gap-2 group-hover:text-white transition-all text-lg"

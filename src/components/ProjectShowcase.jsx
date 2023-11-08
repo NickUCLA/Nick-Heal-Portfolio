@@ -115,7 +115,7 @@ const ProjectShowcase = ({ isOpenFromProps, setIsOpenFromProps, project }) => {
                             {info.infoTitle}
                           </span>
                         </h1>
-                        <p className="md:ml-6 text-light-gray whitespace-pre-wrap sm:ml-2">
+                        <p className="md:ml-6 text-lighter-gray whitespace-pre-wrap sm:ml-2">
                           {info.infoText}
                         </p>
                       </div>
