@@ -41,12 +41,12 @@ function NavBar() {
             <li className="cursor-pointer flex flex-row items-center gap-2 group">
               <a
                 className="flex flex-row items-center gap-2 group-hover:text-white transition-all text-lg"
-                href={aboutData.social_media.github}
+                href={aboutData.resume}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="w-[11px] h-[11px] bg-light-green rounded-full hover:bg-primary-green group-hover:bg-primary-green transition-all"></span>
-                <span>GitHub</span>
+                <span>Resume</span>
               </a>
             </li>
             <li className="cursor-pointer">
