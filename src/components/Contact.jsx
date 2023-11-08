@@ -3,6 +3,10 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import Loading from "./Loading";
 import emailjs from "emailjs-com";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import aboutData from "../data/aboutData";
 
 function ContactMe() {
   const [name, setName] = useState("");
@@ -92,12 +96,40 @@ function ContactMe() {
         className="grid grid-cols-12 my-5"
       >
         <div className="col-span-1"></div>
-        <div className="col-span-10">
-          <p className="text-white">
-            Feel free to contact me through my social media or <br />
-            through the form below. I’m currently open for job offers or
-            freelance projects.
-          </p>
+        <div className="col-span-10 flex flex-col md:flex-row w-full">
+          <div className="w-full text-center md:text-left">
+            <p className="text-white">
+              Feel free to contact me through my social media or <br />
+              through the form below. I’m currently open for job offers or
+              freelance projects.
+            </p>
+          </div>
+          <div className="flex flex-row justify-center items-center w-full py-4 md:py-0">
+            <a
+              href={aboutData.social_media.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center"
+            >
+              <FontAwesomeIcon
+                className="text-light-gray cursor-pointer hover:text-white transition-all p-2"
+                size="3x"
+                icon={faGithub}
+              />
+            </a>
+            <a
+              href={aboutData.social_media.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center"
+            >
+              <FontAwesomeIcon
+                className="text-light-gray cursor-pointer hover:text-white transition-all p-2"
+                size="3x"
+                icon={faLinkedin}
+              />
+            </a>
+          </div>
         </div>
       </motion.div>
       <motion.div
@@ -109,7 +141,7 @@ function ContactMe() {
       >
         <div className="col-span-1"></div>
         <form className="col-span-10">
-          <div className="w-full flex my-3 lg:gap-20 flex-row">
+          <div className="w-full flex my-3 lg:gap-20 flex-col md:flex-row">
             <div className="flex grow flex-col gap-1">
               <label className="text-white" htmlFor="name">
                 Name

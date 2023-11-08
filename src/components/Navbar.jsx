@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import logo from "/src/icons/N.png";
+import aboutData from "../data/aboutData";
 
 function NavBar() {
   const mobileMenuRef = useRef(null);
@@ -40,7 +41,9 @@ function NavBar() {
             <li className="cursor-pointer flex flex-row items-center gap-2 group">
               <a
                 className="flex flex-row items-center gap-2 group-hover:text-white transition-all text-lg"
-                href=""
+                href={aboutData.social_media.github}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <span className="w-[11px] h-[11px] bg-light-green rounded-full hover:bg-primary-green group-hover:bg-primary-green transition-all"></span>
                 <span>GitHub</span>
@@ -106,7 +109,9 @@ function NavBar() {
           <li className="cursor-pointer flex flex-row py-3 bg-primary-green text-white items-center gap-2 group hover:opacity-70">
             <a
               className="flex flex-row items-center gap-2 group-hover:text-white mx-10 transition-all"
-              href=""
+              href={aboutData.social_media.github}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span>GitHub</span>
             </a>
@@ -114,7 +119,7 @@ function NavBar() {
           <li className="cursor-pointer flex flex-row py-3 bg-primary-green text-white items-center gap-2 group hover:opacity-70">
             <a
               className="flex flex-row items-center gap-2 group-hover:text-white mx-10 transition-all"
-              href=""
+              href="#contact-me"
             >
               <span>Contact Me</span>
             </a>

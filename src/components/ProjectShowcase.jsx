@@ -102,7 +102,7 @@ const ProjectShowcase = ({ isOpenFromProps, setIsOpenFromProps, project }) => {
               </div>
               <div className="grid grid-cols-12">
                 <div className="col-span-1 "></div>
-                <div className="col-span-10 grid grid-cols-12 gap-10">
+                <div className="col-span-10 grid grid-cols-12 gap-8">
                   {project.info.map((info, index) => {
                     return (
                       <div
@@ -115,7 +115,7 @@ const ProjectShowcase = ({ isOpenFromProps, setIsOpenFromProps, project }) => {
                             {info.infoTitle}
                           </span>
                         </h1>
-                        <p className="ml-6 text-light-gray whitespace-pre-wrap">
+                        <p className="md:ml-6 text-light-gray whitespace-pre-wrap sm:ml-2">
                           {info.infoText}
                         </p>
                       </div>
