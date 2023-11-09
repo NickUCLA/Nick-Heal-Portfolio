@@ -16,7 +16,7 @@ Welcome to my professional portfolio repository. This space showcases my journey
 ## Screenshot and Deployed Link
 
 ![Screenshot](public/images/screenshot.png)
-[Visit the Deployed App](https://654d417584fa970008e94a03--magnificent-chaja-4929ce.netlify.app/)
+[Visit the Deployed App](https://654d52fc7ad9850008c2f19c--magnificent-chaja-4929ce.netlify.app/)
 
 ## Features
 
