@@ -109,11 +109,11 @@ function NavBar() {
           <li className="cursor-pointer flex flex-row py-3 bg-primary-green text-white items-center gap-2 group hover:opacity-70">
             <a
               className="flex flex-row items-center gap-2 group-hover:text-white mx-10 transition-all"
-              href={aboutData.social_media.github}
+              href={aboutData.resume}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>GitHub</span>
+              <span>Resume</span>
             </a>
           </li>
           <li className="cursor-pointer flex flex-row py-3 bg-primary-green text-white items-center gap-2 group hover:opacity-70">
