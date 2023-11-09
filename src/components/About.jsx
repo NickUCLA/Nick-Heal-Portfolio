@@ -62,7 +62,7 @@ const About = () => {
           </h1>
           <div className="flex flex-col gap-3 mx-5">
             {aboutData.techs.map((tech, i) => (
-              <TechIcon key={i} techName={tech} size="2x" color="#FEC260" />
+              <TechIcon key={i} techName={tech} size="2x" color="#1eddff" />
             ))}
           </div>
         </div>

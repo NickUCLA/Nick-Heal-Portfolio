@@ -11,7 +11,7 @@ const config = {
     extend: {
       colors: {
         "primary-bg": "#2A0944",
-        "primary-green": "#FEC260",
+        "primary-green": "#1eddff",
         "light-green": "#A12568",
         "light-gray": "rgba(255, 255, 255, 0.7)",
         "lighter-gray": "#FAF3E3",

@@ -39,7 +39,6 @@ function ContactMe() {
     const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const userID = import.meta.env.VITE_EMAILJS_USER_ID;
 
-    // Use your own service ID, template ID, and user ID from EmailJS
     emailjs
       .send(serviceID, templateID, templateParams, userID)
       .then(
