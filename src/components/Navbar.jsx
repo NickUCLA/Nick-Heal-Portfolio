@@ -70,7 +70,7 @@ function NavBar() {
           className="outline-none mobile-menu-button"
         >
           <svg
-            className="w-8 h-8 text-gray-500 hover:text-green-500"
+            className="w-8 h-8 text-gray-500 hover:text-blue-500"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"

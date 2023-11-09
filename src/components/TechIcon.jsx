@@ -52,7 +52,6 @@ const techIconMap = {
   GraphQL: faGrapQl,
   MongoDB: faMongoDb,
   TailwindCSS: faWind,
-  // For TailwindCSS, you'll have to use an SVG or another representation as there's no dedicated FontAwesome icon for it.
 };
 
 const TechIcon = ({ techName, size = "1x", color = "currentColor" }) => {
