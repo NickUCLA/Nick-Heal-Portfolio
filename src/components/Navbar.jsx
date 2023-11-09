@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import logo from "/src/icons/N.png";
+import logo from "/src/icons/N2.png";
 import aboutData from "../data/aboutData";
 
 function NavBar() {
