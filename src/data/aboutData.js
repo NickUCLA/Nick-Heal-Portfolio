@@ -14,7 +14,7 @@ const aboutData = {
   ],
   mail: "nheal179@gmail.com",
   resume:
-    "https://docs.google.com/document/d/156ns8616Kos4EF6L7pSw__jnIwZIp3ra/edit?usp=sharing&ouid=112205294275851309021&rtpof=true&sd=true",
+    "https://drive.google.com/file/d/10xkXHi09Iwo6hVqNVp-zWr335ySr7nv2/view?usp=sharing",
   social_media: {
     github: "https://github.com/NickUCLA",
     linkedin: "https://www.linkedin.com/in/nick-heal-8b7a7128b/",
