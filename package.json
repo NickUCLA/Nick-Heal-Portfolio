@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://nickucla.github.io/Nick-Heal-Portfolio/",
+  "homepage": "https://NickUCLA.github.io/Nick-Heal-Portfolio/",
   "scripts": {
     "dev": "vite",
     "start": "vite",
